@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Presentation</title>
+<title>Progress report</title>
 <meta charset='utf-8'>
 <meta content='Fifth progress report' name='description'>
 <meta content='Matteo Abis' name='author'>
@@ -14,18 +14,13 @@
 </head>
 <body class='index'>
 <div class='reveal'>
-<img align='left' alt='ETH Logo' src='images/eth-logo.jpg' width='20%'>
-<img align='right' alt='PSI Logo' src='images/psi-logo.jpg' width='20%'>
+<img align='left' alt='ETH Logo' src='images/eth-logo.jpg' width='15%'>
+<img align='right' alt='PSI Logo' src='images/psi-logo.jpg' width='15%'>
 <div class='slides'>
 <section data-background-position='bottom' data-background-size='100%' data-background='images/ETHbackground.png'>
-<h2>Grating interferometry on a 160 kVp source</h2>
+<h2>Quantitative high-energy phase measurements</h2>
 </section>
 <section data-transition='none'>
-<h2>Grating interferometry</h2>
-<h3>Talbot effect</h3>
-<div id='talbot-carpet'></div>
-</section>
-<section>
 <h2>High-energy ratio independent of the material</h2>
 <div id='ratio-df'></div>
 </section>
@@ -34,33 +29,28 @@
 <div class='spaced'>
 \[\begin{align*}
 \sigma_P &amp;= \frac{1}{v\sqrt{N}}\\
-&amp;= \frac{1}{v_0 \sqrt{N_0}} \frac{1}{A^{r + 1/2}}
+&amp;= \frac{1}{v_0 \sqrt{N_0}} \frac{1}{A^{R + 1/2}}
 \end{align*} \]
 </div>
 <div class='spaced'>
 \[\begin{align*}
 A &amp;= \text{transmission}\\
 B &amp;= \text{dark field}\\
-r &amp;= \frac{\log B}{\log A}\\
+R &amp;= \frac{\log B}{\log A}\\
 N &amp;= \text{number of photons}\\
 _0 &amp;= \text{without sample}
 \end{align*} \]
 </div>
 </section>
 <section>
-<h2>\( \sigma_P(A, r) \)</h2>
+<h2>\( \sigma_P(A, R) \)</h2>
 <div>
-\(\sigma_P = \frac{1}{v_0 \sqrt{N_0}} \frac{1}{A^{r + 1/2}} \qquad N_0 = 10^4 \text{ and }v_0 = 10\%\)
+\(\sigma_P = \frac{1}{v_0 \sqrt{N_0}} \frac{1}{A^{R + 1/2}} \qquad N_0 = 10^4 \text{ and }v_0 = 10\%\)
 </div>
 <div id='sigma-absorption'></div>
 </section>
 <section>
-<h2>\( \sigma_\text{max} = 2 \pi / 5 \)</h2>
-<ul>
-<li>Rose criterion</li>
-<li>Statistical phase wrapping</li>
-</ul>
-<div class='row'>
+<h2>\( \sigma_\text{max} = 2 \pi / 5 \Rightarrow \text{max thickness}\)</h2>
 <div class='col-md-4' id='table-30'>
 <div class='h3'>max thickness (cm) at 30 keV</div>
 </div>
@@ -68,8 +58,210 @@ _0 &amp;= \text{without sample}
 <div class='col-md-4' id='table-100'>
 <div class='h3'>max thickness (cm) at 100 keV</div>
 </div>
-</div>
 <div id='sigma-absorption'></div>
+</section>
+<section>
+<h2>Progress towards the new setup</h2>
+<ul>
+<li class='alert alert-danger'>gratings</li>
+<li class='alert alert-warning'>source</li>
+<li class='alert alert-success'>motors</li>
+<li class='alert alert-success'>detector</li>
+</ul>
+</section>
+<section>
+<section>
+<h2>Grating fabrication at KIT</h2>
+Detailed progress on the
+<a href='https://tracker.psi.ch/jira/browse/TCNS-10'>issue tracker</a>
+</section>
+<section>
+<h2>First overplated mask (June)</h2>
+<img src='images/S_13-099_T1A013.jpg' style='width: 80%;'>
+<img src='images/S_13-099_T1A006.jpg' style='width: 80%;'>
+</section>
+<section>
+<h2>Second mask, wrong duty cycle (August)</h2>
+<div class='col-md-12'>
+<img src='images/2014.08.08-resume-mask-wrong-dc.png'>
+</div>
+</section>
+<section>
+<h2>First irradiation attempt (October)</h2>
+The resist is too sensitive
+<div class='col-md-12'>
+<img src='images/S_0895-5A005.png'>
+</div>
+</section>
+</section>
+<section>
+<h2>New 225 kV source</h2>
+<ul>
+<li class='alert alert-success'>source</li>
+<li class='alert alert-success'>high-voltage generator</li>
+<li class='alert alert-warning'>controller</li>
+<li class='alert alert-warning'>authorization</li>
+</ul>
+</section>
+<section>
+<section>
+<h2>Mythen detector</h2>
+<ul>
+<li>energy threshold >20 keV</li>
+<li>better PSF with respect to scintillator + camera</li>
+<li>special module with fan geometry</li>
+<li>24 bits (was 16)</li>
+<li>50 &micro;m pixel size (was 80&micro;m)</li>
+<li>detailed SNR studies in Maria's report</li>
+</ul>
+</section>
+<section>
+<h2>Improved visibility by 50%</h2>
+<p>
+average from 5% to 7.5%
+</p>
+<img src='images/visibility.png' style='width: 70%;'>
+</section>
+<section>
+<h2>Improved visibility by 50%</h2>
+<p>
+average from 5% to 7.5%
+</p>
+<img src='images/pixel_visibility.png' style='width: 70%;'>
+</section>
+</section>
+<section>
+<section>
+<h2>Quantitative phase experiments</h2>
+<ul>
+<li>is \(\sigma_P(A, R)\) a good model?</li>
+<li>can we measure \(\delta\)?</li>
+</ul>
+</section>
+<section>
+<h2>Wedge samples</h2>
+<p>
+Constant differential phase value proportional to \(\delta\)
+</p>
+<ul>
+<li>PMMA - Polymethyl methacrylate</li>
+<li>PS - Polystyrene</li>
+<li>HDPE - High-density polyethylene</li>
+</ul>
+</section>
+<section>
+<h2>\(R \approx 2\)</h2>
+<img src='images/R_distribution.png' style='height: 60vh;'>
+</section>
+<section>
+<h2>\[ \sigma_P(A, R) = [v_0 \sqrt{N_0} A^{R + 1/2}]^{-1}\]</h2>
+<p>\[\text{prediction error} = \frac{\sigma_\text{predicted} - \sigma_\text{observed}}{\sigma_{\text{predicted}}}\]</p>
+<img src='images/relative_prediction_error.png' style='height: 60vh;'>
+</section>
+<section>
+<h2>Measuring \( \delta \)</h2>
+<p>
+geometrical inputs + measured dpc value P:
+</p>
+<p>
+\[ \delta = \frac{2 \pi p \tan \theta}{D}P  \]
+</p>
+</section>
+<section>
+<h2>Absolute \( \delta \)</h2>
+<div class='row'>
+<div class='col-md-2'></div>
+<div class='col-md-8'>
+<table class='table'>
+<thead>
+<tr>
+<th>material</th>
+<th>NIST table \( \delta (\cdot 10^{-9}) \)</th>
+<th>experimental \( \delta (\cdot 10^{-9}) \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PMMA</td>
+<td>\(102\)</td>
+<td>\(92 \pm 19\)</td>
+</tr>
+<tr>
+<td>PS</td>
+<td>\(90\)</td>
+<td>\(81 \pm 21\)</td>
+</tr>
+<tr>
+<td>HDPE</td>
+<td>\(88\)</td>
+<td>\(87 \pm 14\)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p class='alert alert-success'>
+No fit, no calibration, real absolute experimental values!
+</p>
+<p class='alert alert-success'>
+theoretical values for an energy of 50 keV, which is the average of the simulated spectrum
+</p>
+</section>
+<section>
+<h2>Relative \( \delta \)</h2>
+<p>
+Accounts for energy calibration, universally used in publications
+</p>
+<div class='row'>
+<div class='col-md-2'></div>
+<div class='col-md-8'>
+<table class='table'>
+<thead>
+<tr>
+<th>material</th>
+<th>NIST table \( \delta/\delta_\text{PMMA} \)</th>
+<th>experimental \( \delta/\delta_\text{PMMA} \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PS</td>
+<td>\(0.89\)</td>
+<td>\(0.88 \pm 0.30\)</td>
+</tr>
+<tr>
+<td>HDPE</td>
+<td>\(0.87\)</td>
+<td>\(0.95 \pm 0.25\)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p class='alert alert-danger'>
+Note the large uncertainty, even after 50 hours exposure per sample
+</p>
+</section>
+</section>
+<section>
+<h2>Conclusions</h2>
+<h3>New setup</h3>
+<ul>
+<li>only official authorization is missing</li>
+<li class='alert alert-success'>excellent performance of the new motors and detector</li>
+<li class='alert alert-danger'>gratings still unavailable</li>
+</ul>
+<h3>Noise model</h3>
+<ul>
+<li class='alert alert-success'>no free parameters, reasonable agreement within 50%</li>
+<li>important constraints for applications</li>
+<li class='alert alert-danger'>missing link \(R \leftrightarrow \) geometry and energy</li>
+</ul>
+<h3>Quantitative phase measurements</h3>
+<ul>
+<li class='alert alert-success'>very good agreement, even without calibration</li>
+<li class='alert alert-danger'>measurement requires many long exposures</li>
+</ul>
 </section>
 
 </div>
