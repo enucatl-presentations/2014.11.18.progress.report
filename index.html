@@ -25,42 +25,6 @@
 <div id='ratio-df'></div>
 </section>
 <section>
-<h2>Noise properties of the phase</h2>
-<div class='spaced'>
-\[\begin{align*}
-\sigma_P &amp;= \frac{1}{v\sqrt{N}}\\
-&amp;= \frac{1}{v_0 \sqrt{N_0}} \frac{1}{A^{R + 1/2}}
-\end{align*} \]
-</div>
-<div class='spaced'>
-\[\begin{align*}
-A &amp;= \text{transmission}\\
-B &amp;= \text{dark field}\\
-R &amp;= \frac{\log B}{\log A}\\
-N &amp;= \text{number of photons}\\
-_0 &amp;= \text{without sample}
-\end{align*} \]
-</div>
-</section>
-<section>
-<h2>\( \sigma_P(A, R) \)</h2>
-<div>
-\(\sigma_P = \frac{1}{v_0 \sqrt{N_0}} \frac{1}{A^{R + 1/2}} \qquad N_0 = 10^4 \text{ and }v_0 = 10\%\)
-</div>
-<div id='sigma-absorption'></div>
-</section>
-<section>
-<h2>\( \sigma_\text{max} = 2 \pi / 5 \Rightarrow \text{max thickness}\)</h2>
-<div class='col-md-4' id='table-30'>
-<div class='h3'>max thickness (cm) at 30 keV</div>
-</div>
-<div class='col-md-4'></div>
-<div class='col-md-4' id='table-100'>
-<div class='h3'>max thickness (cm) at 100 keV</div>
-</div>
-<div id='sigma-absorption'></div>
-</section>
-<section>
 <h2>Progress towards the new setup</h2>
 <ul>
 <li class='alert alert-danger'>gratings</li>
@@ -133,8 +97,8 @@ average from 5% to 7.5%
 <section>
 <h2>Quantitative phase experiments</h2>
 <ul>
-<li>is \(\sigma_P(A, R)\) a good model?</li>
-<li>can we measure \(\delta\)?</li>
+<li>noise: is \(\sigma_P\) reliable?</li>
+<li>signal: can we measure \(\delta\)?</li>
 </ul>
 </section>
 <section>
@@ -165,9 +129,24 @@ Constant differential phase value proportional to \(\delta\)
 <img src='images/R_distribution.png' style='height: 60vh;'>
 </section>
 <section>
-<h2>\[ \sigma_P(A, R) = [v_0 \sqrt{N_0} A^{R + 1/2}]^{-1}\]</h2>
+<h2>Noise properties of the phase</h2>
+<div class='spaced'>
+\[\begin{align*}
+\sigma_P &amp;= \frac{2}{v_0\sqrt{N_0}}\\
+\end{align*} \]
+</div>
+<div class='spaced'>
+\[\begin{align*}
+v &amp;= \text{visibility}\\
+N &amp;= \text{number of photons}\\
+_0 &amp;= \text{without sample}
+\end{align*} \]
+</div>
+</section>
+<section>
+<h2>\[ \sigma_P = 2(v_0 \sqrt{N_0})^{-1}\]</h2>
 <p>\[\text{prediction error} = \frac{\sigma_\text{predicted} - \sigma_\text{observed}}{\sigma_{\text{predicted}}}\]</p>
-<img src='images/relative_prediction_error.png' style='height: 60vh;'>
+<img src='images/relative_prediction_error_flat_only_meanB.png' style='height: 60vh;'>
 </section>
 <section>
 <h2>Measuring \( \delta \)</h2>
@@ -289,13 +268,14 @@ Note the large uncertainty, even after 50 hours exposure per sample
 <li class='alert alert-success'>excellent performance of the new motors and detector</li>
 <li class='alert alert-danger'>gratings still unavailable</li>
 </ul>
-<h3>Noise model</h3>
+<h3>Noise: sensitivity prediction</h3>
 <ul>
 <li class='alert alert-success'>no free parameters, reasonable agreement within 50%</li>
 <li>important constraints for applications</li>
 <li class='alert alert-danger'>missing link \(R \leftrightarrow \) geometry and energy</li>
+<li class='alert alert-danger'>\(R < \text{ or } > 1 \) should be particularly important</li>
 </ul>
-<h3>Quantitative phase measurements</h3>
+<h3>Signal: quantitative phase</h3>
 <ul>
 <li class='alert alert-success'>very good agreement, even without calibration</li>
 <li class='alert alert-danger'>measurement requires many long exposures</li>
